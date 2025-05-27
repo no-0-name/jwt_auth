@@ -10,18 +10,18 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserResponse {
+public class RegisterResponseDTO {
     private Long id;
     private String email;
-    private String firstName;
-    private String lastName;
+    private String firstname;
+    private String lastname;
 
-    public static UserResponse fromUser(User user) {
-        return UserResponse.builder()
+    public static RegisterResponseDTO fromUser(User user) {
+        return RegisterResponseDTO.builder()
                 .id(user.getId())
                 .email(user.getEmail())
-                .firstName(user.getFirstName())
-                .lastName(user.getLastName())
+                .firstname(user.getFirstname())
+                .lastname(user.getLastname())
                 .build();
     }
 }
